@@ -35,3 +35,13 @@ AI/ML Applications | Multi-Agent Systems | Data Processing | Backend Development
 - **AI**: 규칙 기반 1차 분류 → 애매한 요청만 소형 LLM 2차 보정하는 하이브리드 의도 라우터, 경량 RAG(네이버 뉴스 + 웹 스니펫 주입), 구조화 출력(JSON) 퀴즈 생성 후 서버 화이트리스트 검증, LangSmith로 전체 LLM 호출 트레이싱
 - **아키텍처**: Vercel Hobby 함수 개수 제한을 단일 서버리스 게이트웨이(`api/gw.ts`) + `vercel.json` rewrites로 우회, 외부 시세/기업 API 실패 시 목업 폴백으로 무중단
 - **Tech**: React 18 · TypeScript · Vite · Tailwind · shadcn/ui · Leaflet · TanStack Query · Supabase(Postgres·Auth) · OpenAI · Capacitor(Android/iOS) · Vitest · Playwright
+
+
+### [KITCH](https://github.com/YeouidoRocketTeam/Project_Rocket_Team) — 주식 정보 신뢰도 AI 분석 앱
+
+SNS·유튜브·뉴스의 주식 정보 링크를 입력하면 AI가 ROC 가중치법으로 신뢰도를 자동 채점해, 개인 투자자가 찌라시·선동성 콘텐츠를 걸러낼 수 있게 돕는 모바일 앱
+
+- **신뢰도 알고리즘**: 출처 권위도(40.8%) · 시점 유효성(24.2%) · 논리적 완결성(15.8%) · 이해관계 투명성(10.3%) · 데이터 구체성(6.1%) · 교차검증 일치도(2.8%) 6개 지표를 ROC 가중치법으로 합산, 체크리스트 기반 감점 방식으로 0~100점 산출
+- - **AI**: 멀티 에이전트 + RAG로 교차검증(교차검증 불일치 시 "경고 상태" 자동 발동), 섹터 키워드 기반 관련 뉴스 자동 페치, 감성 분석(Sentiment) 병행
+  - - **아키텍처**: pnpm 모노레포(api-server · mobile · lib) — OpenAPI 스펙에서 Orval로 React Query 훅·Zod 스키마 코드젠, Express 5 라우트는 api-zod로 요청·응답 검증, 키움증권 연동 바텀바
+    - - **Tech**: React Native · Expo · TypeScript · Express 5 · PostgreSQL · Drizzle ORM · Zod · Orval · pnpm Workspaces
