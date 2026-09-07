@@ -1,5 +1,4 @@
 ## 🎯 About Me
-
 AI/LLM 애플리케이션과 백엔드 시스템 개발에 관심이 많은 개발자입니다. **LangGraph**를 활용한 멀티 에이전트 워크플로우 구축과 데이터 처리 파이프라인 설계에 집중하고 있습니다.
 
 - 🤖 **관심 분야**: LLM 애플리케이션, 멀티 에이전트 시스템, 백엔드 개발
@@ -21,7 +20,7 @@ AI/LLM 애플리케이션과 백엔드 시스템 개발에 관심이 많은 개�
 Python | TypeScript | JavaScript
 
 **Frameworks & Tools**
-LangGraph | LangChain | Jupyter Notebook | Git
+LangGraph | LangChain | n8n | ComfyUI | Jupyter Notebook | Git
 
 **Areas of Expertise**
 AI/ML Applications | Multi-Agent Systems | Data Processing | Backend Development
@@ -44,4 +43,4 @@ SNS·유튜브·뉴스의 주식 정보 링크를 입력하면 AI가 ROC 가중�
 - **신뢰도 알고리즘**: 출처 권위도(40.8%) · 시점 유효성(24.2%) · 논리적 완결성(15.8%) · 이해관계 투명성(10.3%) · 데이터 구체성(6.1%) · 교차검증 일치도(2.8%) 6개 지표를 ROC 가중치법으로 합산, 체크리스트 기반 감점 방식으로 0~100점 산출
 - - **AI**: 멀티 에이전트 + RAG로 교차검증(교차검증 불일치 시 "경고 상태" 자동 발동), 섹터 키워드 기반 관련 뉴스 자동 페치, 감성 분석(Sentiment) 병행
   - - **아키텍처**: pnpm 모노레포(api-server · mobile · lib) — OpenAPI 스펙에서 Orval로 React Query 훅·Zod 스키마 코드젠, Express 5 라우트는 api-zod로 요청·응답 검증, 키움증권 연동 바텀바
-    - - **Tech**: React Native · Expo · TypeScript · Express 5 · PostgreSQL · Drizzle ORM · Zod · Orval · pnpm Workspaces
+    - - **Tech**: React Native · Expo · TypeScript · Express 5 · PostgreSQL · Drizzle ORM · OpenAI · Zod · Orval · pnpm Workspaces
