@@ -33,6 +33,8 @@ AI/ML Applications | Multi-Agent Systems | Data Processing | Backend Development
 
 🔗 **Live Demo**: [goodjob-ai.streamlit.app](https://goodjob-ai.streamlit.app) (Google 계정으로 로그인, 계정당 하루 사용 횟수 제한)
 
+![GoodJob 시연](https://github.com/sharppink/goodjob/raw/main/docs/demo.gif)
+
 - **AI**: LangGraph 6단계 에이전트(공고 구조화 → RAG 경력 검색 → 적합도 판정 → 이력서 초안 → 사실성 검토 → 면접 질문), 적합도가 낮으면 조기 종료. 검토 단계에서 원본 경력과 대조해 근거 없는 경력 업무를 같은 입력 5회 생성 기준 14건 → 0건으로 제거
 - **측정 기반 결정**: RAGAS로 재 보니 리랭커가 검색 recall을 0.90 → 0.65로 떨어뜨려 기본값에서 제외, gpt-4o 응답으로 증류한 데이터로 Qwen2.5-7B를 QLoRA 파인튜닝해 공고 파서 우대기술 F1 0.59 → 0.73
 - **개인정보 보호 모드**: 프로필이 PC 밖으로 나가지 않도록 LLM·임베딩을 전부 로컬(Ollama)로 처리
