@@ -20,12 +20,25 @@ AI/LLM 애플리케이션과 백엔드 시스템 개발에 관심이 많은 개�
 Python | TypeScript | JavaScript
 
 **Frameworks & Tools**
-LangGraph | LangChain | n8n | ComfyUI | Jupyter Notebook | Git
+LangGraph | LangChain | FastAPI | Streamlit | Supabase | Docker | Ollama | n8n | ComfyUI | Jupyter Notebook | Git
 
 **Areas of Expertise**
 AI/ML Applications | Multi-Agent Systems | Data Processing | Backend Development
 
 ## 🚀 Projects
+
+### [GoodJob](https://github.com/sharppink/goodjob) — 채용공고 맞춤 이력서 생성 AI 에이전트
+
+채용공고와 내 경력을 비교해 적합도를 점수로 매기고, 충분히 맞으면 그 공고에 맞춘 이력서·면접 예상 질문·자소서를 써 주는 AI 서비스
+
+🔗 **Live Demo**: [goodjob-ai.streamlit.app](https://goodjob-ai.streamlit.app) (Google 계정으로 로그인, 계정당 하루 사용 횟수 제한)
+
+- **AI**: LangGraph 6단계 에이전트(공고 구조화 → RAG 경력 검색 → 적합도 판정 → 이력서 초안 → 사실성 검토 → 면접 질문), 적합도가 낮으면 조기 종료. 검토 단계에서 원본 경력과 대조해 근거 없는 경력 업무를 같은 입력 5회 생성 기준 14건 → 0건으로 제거
+- **측정 기반 결정**: RAGAS로 재 보니 리랭커가 검색 recall을 0.90 → 0.65로 떨어뜨려 기본값에서 제외, gpt-4o 응답으로 증류한 데이터로 Qwen2.5-7B를 QLoRA 파인튜닝해 공고 파서 우대기술 F1 0.59 → 0.73
+- **개인정보 보호 모드**: 프로필이 PC 밖으로 나가지 않도록 LLM·임베딩을 전부 로컬(Ollama)로 처리
+- **서비스 기능**: 프로필에서 검색어를 만들어 맞는 공고를 찾는 공고 추천(목록·비공고 페이지 자동 제외), 생성한 이력서가 자동으로 들어가고 드래그로 지원 단계를 옮기는 지원 현황 보드
+- **운영**: Google 로그인 + 계정별 데이터 분리(Supabase pgvector, RLS), 공개 배포 비용 상한을 위한 계정별·전체 하루 사용량 제한, pytest 180여 개 + GitHub Actions CI(pgvector 통합 테스트·Docker 동작 확인), Streamlit Cloud 배포
+- **Tech**: Python · LangGraph · OpenAI · Ollama · Chroma · Supabase(pgvector) · RAGAS · Unsloth · FastAPI · Streamlit · Docker · GitHub Actions
 
 ### [워키포인트 (Kiki)](https://github.com/Kiki-The-Stock-Trader-Courier/kiki_with_lovable) — 걸음으로 만나는 근처 상장 기업
 
